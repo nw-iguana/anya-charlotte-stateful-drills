@@ -1,26 +1,21 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react';
+import HelloWorld from './state-drills/HelloWorld';
+import Bomb from './state-drills/Bomb';
+import Roulette from './state-drills/Roulette';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <main className='App'>
+        <h1>Hello World</h1>
+        <HelloWorld who={'World'} />
+
+        <h1>Bomb</h1>
+        <Bomb />
+
+        <h1>Roulette</h1>
+        <Roulette bulletInChamber={8} />
+      </main>
     );
   }
 }
